@@ -20,7 +20,7 @@ import userinterface.RestaurantAdminRole.ManageMenu;
 
 /**
  *
- * @author raunak
+ * @author ujjwal
  */
 public class CustomerAreaJPanel extends javax.swing.JPanel {
 
@@ -36,7 +36,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         this.account=account;
         this.userProcessContainer = userProcessContainer;
         this.system=system;
-        valueLabel.setText("Welcome"+account.getName());
+        valueLabel.setText("Welcome, "+account.getName());
         populateTable();
         pastTblPopulate();
         
@@ -77,7 +77,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         restaurentTable = new javax.swing.JTable();
         requestTestJButton = new javax.swing.JButton();
         refreshTestJButton = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
         valueLabel1 = new javax.swing.JLabel();
         valueLabel2 = new javax.swing.JLabel();
@@ -95,7 +94,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Restaurent Name", "Address", "Number"
+                "Restaurant Name", "Address", "Number"
             }
         ) {
             Class[] types = new Class [] {
@@ -113,7 +112,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        restaurentTable.setGridColor(new java.awt.Color(255, 255, 0));
+        restaurentTable.setGridColor(new java.awt.Color(0, 0, 0));
         jScrollPane1.setViewportView(restaurentTable);
         if (restaurentTable.getColumnModel().getColumnCount() > 0) {
             restaurentTable.getColumnModel().getColumn(0).setResizable(false);
@@ -124,7 +123,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         requestTestJButton.setBackground(new java.awt.Color(204, 0, 0));
         requestTestJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         requestTestJButton.setForeground(new java.awt.Color(255, 255, 255));
-        requestTestJButton.setText("Order Food");
+        requestTestJButton.setText("Check The Menu");
         requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 requestTestJButtonActionPerformed(evt);
@@ -141,21 +140,20 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        enterpriseLabel.setText("Customer:");
-
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        valueLabel.setForeground(new java.awt.Color(204, 0, 0));
         valueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valueLabel.setText("<value>");
 
-        valueLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        valueLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        valueLabel1.setForeground(new java.awt.Color(204, 0, 0));
         valueLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        valueLabel1.setText("Available Restaurants");
+        valueLabel1.setText(" Restaurants");
 
-        valueLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        valueLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        valueLabel2.setForeground(new java.awt.Color(204, 0, 0));
         valueLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        valueLabel2.setText("Your Past Orders");
+        valueLabel2.setText("Order Summary");
 
         pastTbl.setForeground(new java.awt.Color(204, 0, 0));
         pastTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -190,50 +188,43 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(valueLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(valueLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(100, 100, 100)
-                                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(valueLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(284, 284, 284)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                         .addComponent(requestTestJButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(294, 294, 294)
-                        .addComponent(refreshTestJButton)))
-                .addGap(8, 12, Short.MAX_VALUE))
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(valueLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(refreshTestJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {refreshTestJButton, requestTestJButton});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(16, 16, 16)
+                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(valueLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(requestTestJButton)
-                .addGap(57, 57, 57)
-                .addComponent(valueLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(113, 113, 113)
+                        .addComponent(valueLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(requestTestJButton))
                 .addGap(44, 44, 44)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addComponent(refreshTestJButton))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(refreshTestJButton))
+                .addGap(27, 114, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -262,7 +253,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_refreshTestJButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable pastTbl;

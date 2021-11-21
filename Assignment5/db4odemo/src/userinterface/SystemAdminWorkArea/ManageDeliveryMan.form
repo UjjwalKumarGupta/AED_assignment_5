@@ -37,7 +37,7 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="backJButton" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="544" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jButton1" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="submitJButton" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -61,7 +61,7 @@
                           <Component id="PasswordField" alignment="1" min="-2" pref="144" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="lblerr" pref="256" max="32767" attributes="0"/>
+                      <Component id="lblerr" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>

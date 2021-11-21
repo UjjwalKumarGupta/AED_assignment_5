@@ -27,7 +27,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         this.system=system;
         //this.account=account;
       
-        valueLabel.setText(account.getName());
+        valueLabel.setText("Admin Area of "+account.getName());
     }
     
     /** This method is called from within the constructor to
@@ -38,50 +38,74 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         manageRestoInfo = new javax.swing.JButton();
         manageMenu = new javax.swing.JButton();
         manageOrders = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("My Work Area -Adminstrative Role");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
-
+        manageRestoInfo.setBackground(new java.awt.Color(204, 0, 0));
+        manageRestoInfo.setForeground(new java.awt.Color(255, 255, 255));
         manageRestoInfo.setText("Manage Restaurant Info");
         manageRestoInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageRestoInfoActionPerformed(evt);
             }
         });
-        add(manageRestoInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 180, -1));
 
+        manageMenu.setBackground(new java.awt.Color(204, 0, 0));
+        manageMenu.setForeground(new java.awt.Color(255, 255, 255));
         manageMenu.setText("Manage menu");
         manageMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageMenuActionPerformed(evt);
             }
         });
-        add(manageMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 150, -1));
 
+        manageOrders.setBackground(new java.awt.Color(204, 0, 0));
+        manageOrders.setForeground(new java.awt.Color(255, 255, 255));
         manageOrders.setText("Manage Orders");
         manageOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageOrdersActionPerformed(evt);
             }
         });
-        add(manageOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, -1, -1));
-
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Restaurant :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 120, 30));
 
         valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        valueLabel.setForeground(new java.awt.Color(204, 0, 0));
+        valueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 160, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(valueLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(198, 198, 198)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(manageOrders)
+                    .addComponent(manageMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(manageRestoInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(198, Short.MAX_VALUE))
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {manageMenu, manageOrders, manageRestoInfo});
+
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(valueLabel)
+                .addGap(110, 110, 110)
+                .addComponent(manageOrders)
+                .addGap(32, 32, 32)
+                .addComponent(manageMenu)
+                .addGap(33, 33, 33)
+                .addComponent(manageRestoInfo)
+                .addContainerGap(169, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageRestoInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageRestoInfoActionPerformed
@@ -112,8 +136,6 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton manageMenu;
     private javax.swing.JButton manageOrders;
     private javax.swing.JButton manageRestoInfo;

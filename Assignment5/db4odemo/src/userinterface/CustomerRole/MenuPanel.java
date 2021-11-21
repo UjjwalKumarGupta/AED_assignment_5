@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author ujjwal
  */
 public class MenuPanel extends javax.swing.JPanel {
 
@@ -43,7 +43,7 @@ public class MenuPanel extends javax.swing.JPanel {
        this.system=system;
         this.userAccount = account;
         populateTable();
-        valueLabel.setText(restro.getName());
+        valueLabel.setText("Welcome to "+restro.getName()+" !");
        
     }
      public void populateTable(){
@@ -95,33 +95,40 @@ public class MenuPanel extends javax.swing.JPanel {
         RemoveBtn = new javax.swing.JButton();
         addressTxt = new javax.swing.JTextField();
         enterpriseLabel1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        cardBtn.setBackground(new java.awt.Color(204, 0, 0));
+        cardBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        cardBtn.setForeground(new java.awt.Color(255, 255, 255));
         cardBtn.setText("Add to Cart");
         cardBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cardBtnActionPerformed(evt);
             }
         });
-        add(cardBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, -1, -1));
 
+        backJButton.setBackground(new java.awt.Color(204, 0, 0));
+        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<<Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 560, -1, -1));
 
-        valueLabel.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        valueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        valueLabel.setForeground(new java.awt.Color(204, 0, 0));
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 130, -1));
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("Address:");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, 120, 30));
+        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        enterpriseLabel.setForeground(new java.awt.Color(204, 0, 0));
+        enterpriseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        enterpriseLabel.setText("Delivery Address:");
 
+        cartTable.setForeground(new java.awt.Color(204, 0, 0));
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -150,8 +157,7 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cartTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, -1, 100));
-
+        menuTable.setForeground(new java.awt.Color(204, 0, 0));
         menuTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -180,28 +186,105 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(menuTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, 100));
-
+        orderBtn1.setBackground(new java.awt.Color(204, 0, 0));
+        orderBtn1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        orderBtn1.setForeground(new java.awt.Color(255, 255, 255));
         orderBtn1.setText("Order");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderBtn1ActionPerformed(evt);
             }
         });
-        add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, -1, -1));
 
+        RemoveBtn.setBackground(new java.awt.Color(204, 0, 0));
+        RemoveBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        RemoveBtn.setForeground(new java.awt.Color(255, 255, 255));
         RemoveBtn.setText("Remove From Cart");
         RemoveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RemoveBtnActionPerformed(evt);
             }
         });
-        add(RemoveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
-        add(addressTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 490, 170, -1));
 
-        enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel1.setText("Order Here:");
-        add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 120, 30));
+        enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        enterpriseLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        enterpriseLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        enterpriseLabel1.setText("What would you like to have today ?");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Your Orders :");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(enterpriseLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2))
+                        .addGap(28, 28, 28)
+                        .addComponent(cardBtn))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(addressTxt))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(backJButton))
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(RemoveBtn)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(283, 283, 283)
+                .addComponent(orderBtn1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {RemoveBtn, cardBtn, orderBtn1});
+
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(valueLabel)
+                .addGap(18, 18, 18)
+                .addComponent(enterpriseLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cardBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RemoveBtn))
+                .addGap(94, 94, 94)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addressTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addComponent(orderBtn1)
+                .addGap(49, 49, 49)
+                .addComponent(backJButton)
+                .addContainerGap())
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addressTxt, orderBtn1});
+
     }// </editor-fold>//GEN-END:initComponents
 
     private void cardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cardBtnActionPerformed
@@ -316,6 +399,7 @@ public class MenuPanel extends javax.swing.JPanel {
     private javax.swing.JTable cartTable;
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel enterpriseLabel1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable menuTable;

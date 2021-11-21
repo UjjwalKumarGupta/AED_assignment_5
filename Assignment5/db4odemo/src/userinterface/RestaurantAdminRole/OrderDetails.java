@@ -18,7 +18,7 @@ import userinterface.CustomerRole.CustomerAreaJPanel;
 
 /**
  *
- * @author chief_kmv
+ * @author ujjwal
  */
 public class OrderDetails extends javax.swing.JPanel {
 
