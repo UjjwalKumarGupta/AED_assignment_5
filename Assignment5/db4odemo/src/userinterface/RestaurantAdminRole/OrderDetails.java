@@ -68,10 +68,17 @@ public class OrderDetails extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         statusBtn = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        orderTable.setForeground(new java.awt.Color(204, 0, 0));
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
@@ -98,26 +105,68 @@ public class OrderDetails extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(orderTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, 100));
-
+        BackBtn.setBackground(new java.awt.Color(204, 0, 0));
+        BackBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BackBtn.setForeground(new java.awt.Color(255, 255, 255));
         BackBtn.setText("<< Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BackBtnActionPerformed(evt);
             }
         });
-        add(BackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Order ID:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
+        statusBtn.setBackground(new java.awt.Color(204, 0, 0));
+        statusBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        statusBtn.setForeground(new java.awt.Color(255, 255, 255));
         statusBtn.setText("Change Status to Ready to Deliver");
         statusBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statusBtnActionPerformed(evt);
             }
         });
-        add(statusBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(BackBtn))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(283, 283, 283)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(185, 185, 185)
+                .addComponent(statusBtn)
+                .addContainerGap(186, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BackBtn)
+                .addGap(84, 84, 84)
+                .addComponent(jLabel1)
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(statusBtn)
+                .addContainerGap())
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void BackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackBtnActionPerformed

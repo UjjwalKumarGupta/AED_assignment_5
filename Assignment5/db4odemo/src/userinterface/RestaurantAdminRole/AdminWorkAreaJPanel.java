@@ -46,6 +46,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         manageRestoInfo.setBackground(new java.awt.Color(204, 0, 0));
+        manageRestoInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         manageRestoInfo.setForeground(new java.awt.Color(255, 255, 255));
         manageRestoInfo.setText("Manage Restaurant Info");
         manageRestoInfo.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +56,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         manageMenu.setBackground(new java.awt.Color(204, 0, 0));
+        manageMenu.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         manageMenu.setForeground(new java.awt.Color(255, 255, 255));
         manageMenu.setText("Manage menu");
         manageMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +66,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         manageOrders.setBackground(new java.awt.Color(204, 0, 0));
+        manageOrders.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         manageOrders.setForeground(new java.awt.Color(255, 255, 255));
         manageOrders.setText("Manage Orders");
         manageOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -81,14 +84,14 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(valueLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(valueLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(198, 198, 198)
+                .addGap(214, 214, 214)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(manageOrders)
                     .addComponent(manageMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(manageRestoInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(198, Short.MAX_VALUE))
+                    .addComponent(manageRestoInfo))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {manageMenu, manageOrders, manageRestoInfo});
@@ -98,13 +101,13 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(valueLabel)
-                .addGap(110, 110, 110)
+                .addGap(120, 120, 120)
                 .addComponent(manageOrders)
                 .addGap(32, 32, 32)
                 .addComponent(manageMenu)
                 .addGap(33, 33, 33)
                 .addComponent(manageRestoInfo)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

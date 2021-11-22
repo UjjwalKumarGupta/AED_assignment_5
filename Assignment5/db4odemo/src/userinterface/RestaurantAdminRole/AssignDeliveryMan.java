@@ -88,6 +88,7 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        DeliveryManJTable.setForeground(new java.awt.Color(204, 0, 0));
         DeliveryManJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -123,6 +124,8 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
         jScrollPane1.setViewportView(DeliveryManJTable);
 
         AssignOrderBtn.setBackground(new java.awt.Color(204, 0, 0));
+        AssignOrderBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        AssignOrderBtn.setForeground(new java.awt.Color(255, 255, 255));
         AssignOrderBtn.setText("Assign Order");
         AssignOrderBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +134,8 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
         });
 
         BackBtn.setBackground(new java.awt.Color(153, 0, 0));
+        BackBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BackBtn.setForeground(new java.awt.Color(255, 255, 255));
         BackBtn.setText("<< Back");
         BackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,9 +157,6 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -162,28 +164,29 @@ public class AssignDeliveryMan extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(jLabel1)
-                        .addGap(85, 85, 85)
+                        .addGap(89, 89, 89)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(202, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(277, 277, 277)
+                .addContainerGap(198, Short.MAX_VALUE))
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(AssignOrderBtn)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(257, 257, 257))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(8, 8, 8)
+                .addComponent(BackBtn)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(65, 65, 65)
+                .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
+                .addGap(46, 46, 46)
                 .addComponent(AssignOrderBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-                .addComponent(BackBtn)
-                .addContainerGap())
+                .addContainerGap(261, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

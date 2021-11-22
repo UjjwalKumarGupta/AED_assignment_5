@@ -70,6 +70,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        networkJTable.setForeground(new java.awt.Color(204, 0, 0));
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -99,7 +100,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         jScrollPane1.setViewportView(networkJTable);
 
         backJButton.setBackground(new java.awt.Color(204, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +110,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         });
 
         submitJButton.setBackground(new java.awt.Color(204, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
         submitJButton.setText("Save");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -120,6 +121,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setText("Full Name :");
 
         uNameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -128,6 +130,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
         jLabel4.setText("New Password :");
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +140,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         });
 
         updateBtn.setBackground(new java.awt.Color(204, 0, 0));
-        updateBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        updateBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         updateBtn.setForeground(new java.awt.Color(255, 255, 255));
         updateBtn.setText("View");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +150,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         });
 
         deleteBtn.setBackground(new java.awt.Color(204, 0, 0));
-        deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         deleteBtn.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +160,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
         });
 
         ConfirmBtn.setBackground(new java.awt.Color(204, 0, 0));
-        ConfirmBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ConfirmBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ConfirmBtn.setForeground(new java.awt.Color(255, 255, 255));
         ConfirmBtn.setText(" Update");
         ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -166,6 +169,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
         jLabel5.setText("New UserName :");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -175,14 +179,12 @@ public class ManageRestaurants extends javax.swing.JPanel {
 
         lblerr.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         lblerr.setForeground(new java.awt.Color(204, 0, 0));
-        lblerr.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -207,10 +209,13 @@ public class ManageRestaurants extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(uNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(lblerr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(lblerr, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
                             .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ConfirmBtn))))
+                            .addComponent(ConfirmBtn)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
 
@@ -241,7 +246,7 @@ public class ManageRestaurants extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backJButton)
                     .addComponent(submitJButton))

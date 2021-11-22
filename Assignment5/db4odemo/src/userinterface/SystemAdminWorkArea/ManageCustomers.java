@@ -82,7 +82,7 @@ public class ManageCustomers extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         lblerr = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 0, 0));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         networkJTable.setForeground(new java.awt.Color(204, 0, 0));
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(

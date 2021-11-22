@@ -95,8 +95,6 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        lblSelectedNode = new javax.swing.JLabel();
         btnManageCustomers = new javax.swing.JButton();
         btnManageRestaurments = new javax.swing.JButton();
         btnManageDeliveryMan = new javax.swing.JButton();
@@ -121,11 +119,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("Selected Node:");
-
-        lblSelectedNode.setText("<View_selected_node>");
-
         btnManageCustomers.setBackground(new java.awt.Color(204, 0, 0));
+        btnManageCustomers.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         btnManageCustomers.setText("Manage All Customers");
         btnManageCustomers.addActionListener(new java.awt.event.ActionListener() {
@@ -135,6 +130,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageRestaurments.setBackground(new java.awt.Color(204, 0, 0));
+        btnManageRestaurments.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageRestaurments.setForeground(new java.awt.Color(255, 255, 255));
         btnManageRestaurments.setText("Manage Restaurants");
         btnManageRestaurments.addActionListener(new java.awt.event.ActionListener() {
@@ -144,6 +140,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageDeliveryMan.setBackground(new java.awt.Color(204, 0, 0));
+        btnManageDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnManageDeliveryMan.setForeground(new java.awt.Color(255, 255, 255));
         btnManageDeliveryMan.setText("Manage Deliveryman");
         btnManageDeliveryMan.addActionListener(new java.awt.event.ActionListener() {
@@ -163,14 +160,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblSelectedNode))))
+                        .addComponent(jLabel2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
+                        .addGap(138, 138, 138)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnManageDeliveryMan)
                             .addComponent(btnManageRestaurments, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -183,11 +175,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(lblSelectedNode))
-                .addGap(18, 18, 18)
+                .addGap(57, 57, 57)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageCustomers)
@@ -195,7 +183,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageRestaurments)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageDeliveryMan)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jSplitPane.setRightComponent(jPanel2);
@@ -229,11 +217,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageCustomers;
     private javax.swing.JButton btnManageDeliveryMan;
     private javax.swing.JButton btnManageRestaurments;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane;
-    private javax.swing.JLabel lblSelectedNode;
     // End of variables declaration//GEN-END:variables
 }

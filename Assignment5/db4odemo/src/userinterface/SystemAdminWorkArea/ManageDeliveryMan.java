@@ -68,7 +68,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
 
         updateBtn.setBackground(new java.awt.Color(204, 0, 0));
-        updateBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        updateBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         updateBtn.setForeground(new java.awt.Color(255, 255, 255));
         updateBtn.setText("View");
         updateBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
 
         deleteBtn.setBackground(new java.awt.Color(204, 0, 0));
-        deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        deleteBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         deleteBtn.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn.setText("Delete");
         deleteBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +116,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         jScrollPane1.setViewportView(networkJTable);
 
         ConfirmBtn.setBackground(new java.awt.Color(204, 0, 0));
-        ConfirmBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        ConfirmBtn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ConfirmBtn.setForeground(new java.awt.Color(255, 255, 255));
         ConfirmBtn.setText("Update");
         ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +125,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
         jLabel5.setText("New UserName :");
 
         backJButton.setBackground(new java.awt.Color(204, 0, 0));
@@ -147,6 +148,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setText("Full Name :");
 
         uNameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -155,6 +157,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
         jLabel4.setText("Password :");
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +167,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
 
         jButton1.setBackground(new java.awt.Color(204, 0, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +183,6 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
 
         lblerr.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         lblerr.setForeground(new java.awt.Color(204, 0, 0));
-        lblerr.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -201,7 +203,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                                 .addComponent(deleteBtn))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(backJButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 544, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 524, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(submitJButton, javax.swing.GroupLayout.Alignment.TRAILING)))))
@@ -238,7 +240,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                     .addComponent(updateBtn)
                     .addComponent(deleteBtn)
                     .addComponent(ConfirmBtn))
-                .addGap(18, 18, 18)
+                .addGap(116, 116, 116)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -251,7 +253,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 300, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backJButton)
                     .addComponent(submitJButton))
