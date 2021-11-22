@@ -28,6 +28,15 @@ public class Order {
     private ArrayList<Dishes> Order;
     private String cost;
     private String status;
+    private String Feed;
+
+    public String getFeed() {
+        return Feed;
+    }
+
+    public void setFeed(String Feed) {
+        this.Feed = Feed;
+    }
 
     public String getStatus() {
         return status;

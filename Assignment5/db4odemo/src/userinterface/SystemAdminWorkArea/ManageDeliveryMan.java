@@ -87,6 +87,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
             }
         });
 
+        networkJTable.setForeground(new java.awt.Color(204, 0, 0));
         networkJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -129,7 +130,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         jLabel5.setText("New UserName :");
 
         backJButton.setBackground(new java.awt.Color(204, 0, 0));
-        backJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("<< Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -139,9 +140,9 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         });
 
         submitJButton.setBackground(new java.awt.Color(204, 0, 0));
-        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        submitJButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         submitJButton.setForeground(new java.awt.Color(255, 255, 255));
-        submitJButton.setText("Submit");
+        submitJButton.setText("Save");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitJButtonActionPerformed(evt);
@@ -188,7 +189,6 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +203,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                                 .addComponent(deleteBtn))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(backJButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 524, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 512, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(submitJButton, javax.swing.GroupLayout.Alignment.TRAILING)))))
@@ -220,7 +220,10 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                                 .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(PasswordField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(lblerr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblerr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
 
@@ -253,7 +256,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backJButton)
                     .addComponent(submitJButton))
@@ -292,7 +295,7 @@ public class ManageDeliveryMan extends javax.swing.JPanel {
         
        // for()
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
-            System.out.println(user.getRole().getClass().getName());
+            //System.out.println(user.getRole().getClass().getName());
             if ("Business.Role.DeliverManRole".equals(user.getRole().getClass().getName())) {
                 Object[] row = new Object[3];
                

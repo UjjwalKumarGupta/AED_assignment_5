@@ -137,6 +137,7 @@ public class ManageCustomers extends javax.swing.JPanel {
             }
         });
 
+        jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setText("Full Name :");
 
         uNameTextField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -145,6 +146,7 @@ public class ManageCustomers extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
         jLabel4.setText("New Password :");
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +185,7 @@ public class ManageCustomers extends javax.swing.JPanel {
             }
         });
 
+        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
         jLabel5.setText("New UserName :");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -192,7 +195,6 @@ public class ManageCustomers extends javax.swing.JPanel {
 
         lblerr.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
         lblerr.setForeground(new java.awt.Color(204, 0, 0));
-        lblerr.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

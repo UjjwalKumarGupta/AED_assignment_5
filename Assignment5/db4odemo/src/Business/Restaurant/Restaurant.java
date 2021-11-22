@@ -27,7 +27,7 @@ public class Restaurant {
 
   
     
-     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress) {
+     public void addOrder(String restaurentName, String customerName, String deliverMan, ArrayList<Dishes> Order, String cost, String deliveryAddress, String comm) {
         Order order=new Order();
         order.setOrder_id(String.valueOf(id));
         order.setCustomerName(customerName);
@@ -36,6 +36,7 @@ public class Restaurant {
         order.setOrder(Order);
         order.setCost(cost);
         order.setDeliveryAddress(deliveryAddress);
+        order.setFeed(comm);
         order.setStatus("New Order");
         orderList.add(order);
         id++;

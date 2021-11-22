@@ -158,20 +158,20 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         pastTbl.setForeground(new java.awt.Color(204, 0, 0));
         pastTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Order ID", "Restaurent Name", "Amount", "Status"
+                "Order ID", "Restaurant Name", "Amount", "Status", "Comment"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -283,12 +283,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             if (cust.getUserName().equals(account.getUsername())) {
                // System.out.println(restro.getOrderList());
                for(Order menu:cust.getOrderList()){
-                Object[] row = new Object[4];
+                Object[] row = new Object[5];
                 row[0] = menu;
                 row[1] = menu.getRestaurentName();
                
                 row[2] = menu.getCost();
                 row[3] = menu.getStatus();
+                row[4] = menu.getFeed();
                 model.addRow(row);
                }
                 

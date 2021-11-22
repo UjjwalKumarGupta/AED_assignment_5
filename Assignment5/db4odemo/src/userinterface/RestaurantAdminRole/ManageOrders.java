@@ -47,12 +47,13 @@ public class ManageOrders extends javax.swing.JPanel {
             if (restro.getAdminUName().equals(account.getUsername())) {
                 //System.out.println(restro.getOrderList());
                for(Order menu:restro.getOrderList()){
-                Object[] row = new Object[5];
+                Object[] row = new Object[6];
                 row[0] = menu;
                 row[1] = menu.getCustomerName();
                 row[2] = menu.getDeliveryAddress();
                 row[3] = menu.getCost();
                 row[4] = menu.getStatus();
+                row[5] = menu.getFeed();
                 model.addRow(row);
                }
                 
@@ -83,26 +84,26 @@ public class ManageOrders extends javax.swing.JPanel {
         orderTable.setForeground(new java.awt.Color(204, 0, 0));
         orderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Order ID", "Customer Name", "Delivery Address", "Amount", "Status"
+                "Order ID", "Customer Name", "Delivery Address", "Amount", "Status", "Comment"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
